@@ -1,0 +1,417 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins",sans-serif;
+  }
+
+  section{
+    position:relative;
+    width:100%;
+    min-height:50vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    background:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://images.unsplash.com/photo-1503220317375-aaad61436b1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTJ8fHxlbnwwfHx8fA%3D%3D&w=1000&q=80);
+    background-size:cover;
+    background-position:center;
+  }
+  header{
+    position:relative;
+    top:0;
+    width:100%;
+    padding:30px 100px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+  }
+  header .logo img{
+    position:relative;
+    width: 20%;
+      padding: 15px 0;
+  }
+  header .navigation{
+    float: right;
+      list-style: none;
+      
+  }
+  header .navigation a{
+    display: inline-block;
+    color: #fff;
+      text-decoration: none;
+      padding: 5px 20px;
+      font-family: poppins;
+      font-size: 16px;
+      text-transform: uppercase;
+    transition:0.3s;
+    transition-property: background;
+  }
+  header .navigation a:not(:last-child){
+    margin-right:30px;
+  }
+  header .navigation a:hover{
+    background: #fff;
+      color: #333;
+  }
+  .media-icons{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:auto;
+  }
+  
+  .media-icons a{
+    position:relative;
+    color:#fff;
+    font-size:25px;
+    transition:0.3s;
+    transition-property:transform;
+  }
+  
+  .media-icons a:not(:last-child){
+    margin-right:60px;
+  }
+  
+  .media-icons a:hover{
+    transform:scale(1.5);
+  }
+  label{
+    display:none;
+  }
+  #check{
+    z-index:3;
+  }
+
+  #check{
+    display:none;
+  }
+  
+  @media (max-width:960px){
+    header .navigation{
+      display:none;
+    }
+    label{
+      display:block;
+      font-size:25px;
+      cursor:pointer;
+      transition:0.3s;
+      transition-property:color;
+      color: #fff;
+    }
+    label:hover{
+      color:#fff;
+    }
+    label .close-btn{
+      display:none;
+    }
+  
+    #check:checked~header .navigation{
+      z-index:2;
+      position:fixed;
+      background:rgb(46, 45, 45);
+      top:0;
+      bottom:0;
+      left:0;
+      right:0;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+    }
+  
+    #check:checked ~header .navigation a{
+      font-weight:700;
+      margin-right:0;
+      margin-bottom:50px;
+      letter-spacing:2px;
+    }
+  
+    #check:checked ~ header label .menu-btn{
+      display:none;
+    }
+  
+    #check:checked ~ header label .close-btn{
+      z-index:2;
+      display:block;
+      position:fixed;
+    }
+  
+    label .menu-btn{
+      position:absolute;
+    }
+  
+    header .logo img{
+      position:absolute;
+      bottom:-6px;
+      width:30px;
+    }
+  }
+  .footer{
+    background:#262626;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+    margin-top: 20px;
+  }
+  
+  .footer .left-footer,
+  .footer .center-footer,
+  .footer .right-footer{
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  .footer .left-footer{
+    width: 40%;
+  }
+  
+  .footer h3{
+    color:  #ffffff;
+    margin: 0;
+  }
+  
+  .footer h3 span{
+    color:  white;
+    font-family: Algerian;
+    font-size:25px;
+  }
+  
+  
+  .footer .text-footer{
+    color:  #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+  }
+  
+  .footer .text-footer a{
+    display:inline-block;
+    line-height: 1.8;
+    text-decoration: none;
+    color:  inherit;
+  }
+  
+  .footer .footer-name{
+    color: #d9d9d9;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  
+  .footer .center-footer{
+    width: 35%;
+  }
+  
+  .footer .center-footer i{
+    background-color:  #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+  }
+  
+  .footer .center-footer i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+  }
+  
+  .footer .center-footer p{
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin:0;
+  }
+  
+  .footer .center-footer p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+  }
+  
+  .footer .center-footer p a{
+    color:  white;
+    text-decoration: none;;
+  }
+  
+  .footer .right-footer{
+    width: 20%;
+  }
+  
+  .footer .footer-about{
+    line-height: 20px;
+    color: #d9d9d9;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+  }
+  
+  .footer .footer-about span{
+    display: block;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .footer .footer-icons{
+    margin-top: 25px;
+  }
+  
+  .footer .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #33383b;
+    border-radius: 2px;
+  
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+  
+    margin-right: 3px;
+    margin-bottom: 5px;
+  }
+  @media (max-width: 880px) {
+  
+    .footer{
+        font: bold 14px sans-serif;
+  
+    }
+  
+    .footer .left-footer,
+    .footer .center-footer,
+    .footer .right-footer{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+  
+    .footer .center-footer i{
+        margin-left: 0;
+    }
+    .main {
+        line-height: normal;
+        font-size: auto;
+    }
+  
+  }
+  
+ 
+    /____________________/
+
+
+    .heading {
+      position: absolute;
+      width: 1000px;
+      height: 300px;
+      margin: 20% 10%;
+      font-style: italic;
+    
+    }
+
+    .heading h6{
+      text-align: center;
+      color: white;
+      font-size: 30px;
+      font-family: Bradley Hand, cursive;
+    }
+
+    .gallery{
+      /*   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://upgradedpoints.com/wp-content/uploads/2020/05/Cheap-Beach-Vacation-732x348.png);; */
+      background-color: rgb(34, 34, 31);   
+      background-size:cover;
+        }
+     
+     * {
+        box-sizing: border-box;
+     
+     
+      }
+      
+     
+      .row {
+        display: -ms-flexbox;  
+        display: flex;
+        -ms-flex-wrap: wrap; 
+        flex-wrap: wrap;
+        padding: 0 4px;
+        
+      }
+      
+      
+      .column {
+        -ms-flex: 33%; 
+        flex: 33%;
+        max-width: 33%;
+        padding: 0 4px;
+     
+      }
+      
+      .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+        width: 100%;
+        
+      }
+      
+      
+      @media screen and (max-width: 800px) {
+        .column {
+          -ms-flex: 50%;
+          flex: 50%;
+          max-width: 50%;
+        }
+      }
+      @media (max-width:560px){
+        .heading h6{
+          font-size:20px;
+          line-height:50px;
+          padding-left: 10px;
+          width:390px;
+        }
+        .heading h6 span{
+          font-size:15px;
+          font-weight:600;
+        }
+      }
+      
+      @media screen and (max-width: 600px) {
+        .column {
+          -ms-flex: 100%;
+          flex: 100%;
+          max-width: 100%;
+        }
+      }
+     
+      .container {
+        position: relative;
+      }
+     
+      .text-block {
+        position: absolute;
+        bottom: 5px;
+        right: 1px;
+        
+        color: white;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+     
+      /* footer {
+       text-align: center;
+       padding: 3px;
+       background-color: DarkSalmon;
+       color: white;
+       } */
